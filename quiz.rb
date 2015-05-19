@@ -14,24 +14,33 @@ ullamcorper mauris vitae condimentum volutpat."
 # Take a string and return an array of normalized words.
 # normalized words contain no punctuation and are all lower case
 def normalize_words words
+  paragraph.each_char.downcase.split/\W+/
 end
 
 # Question 2
 # Take a string and return the count of normalized words
 def word_count words
+  paragraph.count
 end
 
 # Question 3
 # Take a string and return and array of the unique normalized words.
 def unique_words words
+  paragraph.each_char.downcase.split/\W+/.sort.uniq
 end
 
 # Question 4
 # Take a string and return the count of unique normalized words.
 def unique_word_count words
+  paragraph.sort.uniq.words.each do |word|
+  counts[word] += 1
+
 end
 
 # Question 5
 # Take a string and return a Hash of the nomalized words as keys and the count for the words as the values
 def word_frequencies words
+
 end
+
+
